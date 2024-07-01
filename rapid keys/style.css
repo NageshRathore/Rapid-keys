@@ -1,0 +1,120 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+    
+}
+
+body {
+    min-height: 100vh;
+    display: flex;
+    padding: 0 10px;
+    align-items: center;
+    justify-content: center;
+    background-image: url('thumb-1920-362445.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.wrapper {
+
+    width: 770px;
+    padding: 35px;
+    border-radius: 20px;
+    box-shadow: 0 10px 15px rgba(0, 0, 0, 0.5);
+    background-color: rgba(255, 255, 255, 1);
+}
+
+.wrapper .contentbox {
+    padding: 13px 20px 0;
+    border-radius: 10px;
+    border: 2px solid black;
+}
+
+.wrapper .inputfield {
+    padding: 13px 20px 0;
+    position: absolute;
+    opacity: 0;
+    z-index: -99;
+}
+
+.contentbox .content {
+    margin-top: 17px;
+    display: flex;
+    padding: 12px 0;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    border-top: 1px solid rosybrown;
+}
+
+.contentbox .resultdetails {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: calc(100% - 140px);
+}
+
+.resultdetails li {
+    display: flex;
+    height: 20px;
+    list-style: none;
+    align-items: center;
+}
+
+.content button {
+    width: 105px;
+    outline: none;
+    border: none;
+    color: white;
+    background-color: #130f0f;
+    padding: 8px 0;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 9px;
+    transition: transform 0.1s ease;
+}
+
+.content button:active {
+    transform: scale(0.97);
+}
+
+.typingtext p span {
+    position: relative;
+}
+
+.typingtext p span.active {
+    color: rgb(122, 122, 231);
+}
+
+.typingtext p span.correct {
+    color: green;
+}
+
+.typingtext p span.incorrect {
+    color: red;
+    outline: 1px solid #fff;
+}
+
+::selection {
+    color: #fff;
+    background-color: orange;
+}
+
+.result {
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    margin-top: 20px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    background-color: #f9f9f9;
+    text-align: center;
+}
+
+.result.active {
+    display: flex;
+}
